@@ -6,4 +6,4 @@ if [ $# -eq 0 ]
      exit 1
 fi
 
-qsub test.sub ./$1
+qsub pnetcdf.sub ./$1
