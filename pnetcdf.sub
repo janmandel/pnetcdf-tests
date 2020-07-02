@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH --time=12:00:00 # walltime, abbreviated by -t
+#SBATCH --nodes=2     # number of cluster nodes, abbreviated by -N
+#SBATCH --ntasks=56   # number of MPI tasks, abbreviated by -n
+#SBATCH --account=kochanski-kp     # account - abbreviated by -A
+#SBATCH --partition=strong-kp  # partition, abbreviated by -p
+#SBATCH --job-name=test-pnetcdf
+# load appropriate modules, in this case Intel compilers, MPICHa
+module purge
+module load chpc
+module load intel/18 
+module load impi
+module load netcdf-c
+module load netcdf-f
+module load pnetcdf
+env
+# run the program
+mpiexec -n $SLURM_NTASKS $1 >& test.log 
