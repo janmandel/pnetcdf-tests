@@ -1,6 +1,6 @@
 pnetcdf-tests
 ******
-Repository to test [https://github.com/Parallel-NetCDF/PnetCDF/tree/master/examples/F90 Fortran 90 PnetCDF examples] from https://github.com/Parallel-NetCDF/PnetCDF repository.
+Repository to test <https://github.com/Parallel-NetCDF/PnetCDF/tree/master/examples/F90 Fortran 90 PnetCDF examples>`_ from https://github.com/Parallel-NetCDF/PnetCDF repository.
 
 Compilation
 =============
