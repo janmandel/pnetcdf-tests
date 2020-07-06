@@ -23,7 +23,8 @@ Run cases
 
 Cases
 =============
-* **Block cyclic**::
+* **Block cyclic**
+::
 
  ./block_cyclic.f90
 
