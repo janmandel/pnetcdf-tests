@@ -12,18 +12,20 @@ Compilation
  module load netcdf-c
  module load netcdf-f
  module load pnetcdf
+ 
  make
 
 Run cases
 =============
-```bash
-./test.sh name_executable
-```
+::
+
+ ./test.sh name_executable
 
 Cases
 =============
-```bash
-./block_cyclic.f90
+* **Block cyclic**::
+
+ ./block_cyclic.f90
 
     This example makes a number of nonblocking API calls, each to write a
     block of columns into a 2D integer variable in a file. In other words,
@@ -42,7 +44,10 @@ Cases
         0,  0,  1,  1,  2,  2,  3,  3,  0,  0,  1,  1,  2,  2,  3,  3 ;
 
 
-./column_wise.f90
+
+* **Column wise**::
+
+ ./column_wise.f90
     This example makes a number of nonblocking API calls, each writes a single
     column of a 2D integer variable defined in a file. The data partitioning
     pattern among processes is a cyclic along dimension X, illustrated below
@@ -60,7 +65,10 @@ Cases
        0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 ;
 
 
-./flexible_api.f90
+
+* **Flexible API**::
+
+ ./flexible_api.f90
     This example shows how to use PnetCDF flexible APIs, ncmpi_put_vara_all()
     and ncmpi_iput_vara() to write two 2D array variables (one is of 4-byte
     integer byte and the other float type) in parallel.
@@ -68,19 +76,29 @@ Cases
     dimension.
 
 
-./get_info.f90
+
+* **Get Info**::
+
+ ./get_info.f90
     These two example programs print the PnetCDF and MPI-IO hints to the
     standard output.
 
 
-./hints.f90
+
+* **Hints**::
+
+ ./hints.f90
     This example sets two PnetCDF hints:
         nc_header_align_size and
         nc_var_align_size
     and prints the hint values, the header size, header extent, and
     variables' starting file offsets.
 
-./nonblocking_write.f90
+
+
+* **Non-blocking write**::
+
+ ./nonblocking_write.f90
     This example is almost the same as to collective_write.c but using
     nonblocking APIs instead. 
     The collective_write.c defines NUM_VARS 3D integer non-record variables in a file.
@@ -89,7 +107,11 @@ Cases
     ncmpi_put_vara_int_all(), one for each variable. Performance measurements
     are reported in the standard output.
 
-./put_var.f90
+
+
+* **Put var**::
+
+ ./put_var.f90
     This example shows how to use nfmpi_put_vara_int_all() to write a 2D
     4-byte integer array in parallel. The data partitioning pattern among
     processes is a *-block in Fortran order. It is described by the process
@@ -113,7 +135,10 @@ Cases
          3, 3, 3, 3, 3 ;
 
 
-./put_varn_real.f90
+
+* **Put varn real**::
+
+ ./put_varn_real.f90
     This example makes a single call of ncmpi_put_varn_float_all() to write a
     sequence of one-element requests with arbitrary array indices. All
     subrequest indices, starts[], are within the boundaries of a single
@@ -121,7 +146,10 @@ Cases
     run instructions, and example output.
 
 
-./put_varn_int.f90
+
+* **Put varn int**::
+ 
+ ./put_varn_int.f90
     This example makes a single call of ncmpi_put_varn_int_all() to write a
     sequence of requests with arbitrary array indices and lengths. All
     subrequests (starts[] and counts[]) are within the boundaries of a single
@@ -129,7 +157,10 @@ Cases
     run instructions, and example output.
 
 
-./transpose.f90
+
+* **Transpose**::
+
+ ./transpose.f90
   This example writes dimensional-transposed 3D arrays using varm APIs.
 
   For example, when Z=2, Y=12, and X=8, an array partitioned among 4 processes
@@ -219,12 +250,20 @@ Cases
                  46, 94, 142, 190,                   47, 95, 143, 191 ;
 
 
-./vard_int.f90
+
+* **Vard int**::
+
+ ./vard_int.f90
   These examples show how to use vard APIs to write/read record and fixed-size
   variables.
 
-./fill_mode.f90
+
+* **Fill mode**::
+ 
+ ./fill_mode.f90
   These examples show how to enable file mode
+
+
 
 
 Copyright (C) 2012, Northwestern University and Argonne National Laboratory
