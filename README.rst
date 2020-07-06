@@ -224,4 +224,4 @@ make
   These examples show how to enable file mode
 
 
-# Copyright (C) 2012, Northwestern University and Argonne National Laboratory
+Copyright (C) 2012, Northwestern University and Argonne National Laboratory
