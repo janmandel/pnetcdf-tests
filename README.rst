@@ -3,7 +3,8 @@ pnetcdf-tests
 Repository to test `Fortran 90 PnetCDF examples <https://github.com/Parallel-NetCDF/PnetCDF/tree/master/examples/F90>`_ from https://github.com/Parallel-NetCDF/PnetCDF repository.
 
 Compilation
-=============
+-------------
+
 ::
 
  module purge
@@ -17,13 +18,15 @@ Compilation
  make
 
 Run cases
-=============
+-------------
+
 ::
 
  ./test.sh name_executable
 
 Cases
-=============
+-------------
+
 * **Block cyclic**
 ::
 
