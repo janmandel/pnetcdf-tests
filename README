@@ -5,6 +5,23 @@
 # $Id$
 #
 
+
+# Compilation
+module purge
+module load chpc
+module load intel/18
+module load impi
+module load netcdf-c
+module load netcdf-f
+module load pnetcdf
+make
+
+
+# Run cases
+./test.sh name_executable
+
+
+# Cases
 ./F90/block_cyclic.f90
     This example makes a number of nonblocking API calls, each to write a
     block of columns into a 2D integer variable in a file. In other words,
