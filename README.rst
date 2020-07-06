@@ -1,24 +1,26 @@
 pnetcdf-tests
 ******
 
-# Compilation
-```bash
-module purge
-module load chpc
-module load intel/18
-module load impi
-module load netcdf-c
-module load netcdf-f
-module load pnetcdf
-make
-```
+Compilation
+=============
+::
+        module purge
+        module load chpc
+        module load intel/18
+        module load impi
+        module load netcdf-c
+        module load netcdf-f
+        module load pnetcdf
+        make
 
-# Run cases
+Run cases
+=============
 ```bash
 ./test.sh name_executable
 ```
 
-# Cases
+Cases
+=============
 ```bash
 ./block_cyclic.f90
 
