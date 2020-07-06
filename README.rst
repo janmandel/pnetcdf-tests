@@ -46,7 +46,8 @@ Cases
 
 
 
-* **Column wise**::
+* **Column wise**
+::
 
  ./column_wise.f90
     This example makes a number of nonblocking API calls, each writes a single
@@ -67,7 +68,8 @@ Cases
 
 
 
-* **Flexible API**::
+* **Flexible API**
+::
 
  ./flexible_api.f90
     This example shows how to use PnetCDF flexible APIs, ncmpi_put_vara_all()
@@ -78,7 +80,8 @@ Cases
 
 
 
-* **Get Info**::
+* **Get Info**
+::
 
  ./get_info.f90
     These two example programs print the PnetCDF and MPI-IO hints to the
@@ -86,7 +89,8 @@ Cases
 
 
 
-* **Hints**::
+* **Hints**
+::
 
  ./hints.f90
     This example sets two PnetCDF hints:
@@ -97,7 +101,8 @@ Cases
 
 
 
-* **Non-blocking write**::
+* **Non-blocking write**
+::
 
  ./nonblocking_write.f90
     This example is almost the same as to collective_write.c but using
@@ -110,7 +115,8 @@ Cases
 
 
 
-* **Put var**::
+* **Put var**
+::
 
  ./put_var.f90
     This example shows how to use nfmpi_put_vara_int_all() to write a 2D
@@ -137,7 +143,8 @@ Cases
 
 
 
-* **Put varn real**::
+* **Put varn real**
+::
 
  ./put_varn_real.f90
     This example makes a single call of ncmpi_put_varn_float_all() to write a
@@ -148,7 +155,8 @@ Cases
 
 
 
-* **Put varn int**::
+* **Put varn int**
+::
  
  ./put_varn_int.f90
     This example makes a single call of ncmpi_put_varn_int_all() to write a
@@ -159,7 +167,8 @@ Cases
 
 
 
-* **Transpose**::
+* **Transpose**
+::
 
  ./transpose.f90
   This example writes dimensional-transposed 3D arrays using varm APIs.
@@ -252,14 +261,16 @@ Cases
 
 
 
-* **Vard int**::
+* **Vard int**
+::
 
  ./vard_int.f90
   These examples show how to use vard APIs to write/read record and fixed-size
   variables.
 
 
-* **Fill mode**::
+* **Fill mode**
+::
  
  ./fill_mode.f90
   These examples show how to enable file mode
