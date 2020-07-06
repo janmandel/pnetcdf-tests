@@ -4,14 +4,15 @@ pnetcdf-tests
 Compilation
 =============
 ::
-        module purge
-        module load chpc
-        module load intel/18
-        module load impi
-        module load netcdf-c
-        module load netcdf-f
-        module load pnetcdf
-        make
+
+ module purge
+ module load chpc
+ module load intel/18
+ module load impi
+ module load netcdf-c
+ module load netcdf-f
+ module load pnetcdf
+ make
 
 Run cases
 =============
