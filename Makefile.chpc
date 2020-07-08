@@ -4,12 +4,13 @@ FC = $(DM_FC)
 FCOPTIM = -O2
 
 SRCS = $(wildcard *.f90)
-PRGS = $(patsubst %.f90,%,$(SRCS))
+PRGS = $(patsubst %.f90,%.exe,$(SRCS))
 
 all: $(PRGS) 
+	echo $(PRGS)
 
 $(PRGS) : $(SRCS) utils.o
-	$(FC) $(FCOPTIM) -o $@ $@.f90 utils.o -I$(PNETCDF_INCDIR) -L$(PNETCDF_LIBDIR) -lpnetcdf 
+	$(FC) $(FCOPTIM) -o $@.exe $@.f90 utils.o -I$(PNETCDF_INCDIR) -L$(PNETCDF_LIBDIR) -lpnetcdf 
 
 utils.o : utils.F90
 	$(FC) $(FCOPTIM) -c utils.F90 

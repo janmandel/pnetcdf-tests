@@ -9,7 +9,7 @@ PRGS = $(patsubst %.f90,%,$(SRCS))
 all: $(PRGS) 
 
 $(PRGS) : $(SRCS) utils.o
-	$(FC) $(FCOPTIM) -o $@ $@.f90 utils.o -I$(PNETCDF)/include -L$(PNETCDF)/lib -lpnetcdf 
+	$(FC) $(FCOPTIM) -o $@.exe $@.f90 utils.o -I$(PNETCDF)/include -L$(PNETCDF)/lib -lpnetcdf 
 
 utils.o : utils.F90
 	$(FC) $(FCOPTIM) -c utils.F90 
